@@ -16,7 +16,7 @@ const postSchema = new mongoose.Schema({
     },
     hashtagArray: [{
         type: String,
-        required: false
+        required: true
     }],
     meta: {
         type: String,
@@ -56,9 +56,7 @@ const postSchema = new mongoose.Schema({
                 type: String,
                 required: true
             }, 
-            required: false
-        }],
-        required: false
+        }]
     }]
 }, {timestamps: true});
 

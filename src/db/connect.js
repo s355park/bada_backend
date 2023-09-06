@@ -5,7 +5,6 @@ const { MONGODB_URI } = require("../constants");
 
 const connect = async() => {
     try {
-        console.log("tried")
         await mongoose.connect(MONGODB_URI)
         console.log("connected to MongoDB")
     } catch (error) {
@@ -20,6 +19,8 @@ const connect = async() => {
     });
     return mongoose;
 }
+
+connect();
 
 module.exports = connect;
 

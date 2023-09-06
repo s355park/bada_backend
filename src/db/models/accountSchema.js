@@ -1,8 +1,8 @@
-const mongoose = require("../connect");
+const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 
 const accountSchema = new mongoose.Schema({
-    id: {
+    userId: {
         type: String,
         required: true,
     },
@@ -28,11 +28,15 @@ const accountSchema = new mongoose.Schema({
     },
     friends: [{
         type: String,
-        required: false
+        required: true
+    }],
+    friendRequests: [{
+        type: String,
+        required: true
     }],
     postsOwned: [{
         type: String,
-        required: false
+        required: true
     }]
 });
 
